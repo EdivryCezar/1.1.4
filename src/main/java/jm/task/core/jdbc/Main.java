@@ -3,11 +3,11 @@ package jm.task.core.jdbc;
 import jm.task.core.jdbc.dao.UserDao;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 
-import static jm.task.core.jdbc.util.Util.myUtil;
+import static jm.task.core.jdbc.util.Util.getConnection;
 
 public class Main {
     public static void main(String[] args) {
-        myUtil();
+        getConnection();
         UserDao userDao = new UserDaoJDBCImpl();
 
         userDao.createUsersTable();
